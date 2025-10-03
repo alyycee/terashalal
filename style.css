@@ -1,0 +1,1459 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 90px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  background: rgba(0, 89, 64, 0.70);
+  color: #fff;
+  padding: 18px 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+  backdrop-filter: blur(3px);
+}
+
+/* Nav container */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+.logo img {
+  height: 55px;
+  width: auto;
+  display: block;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding-right: 40px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px; left: 0;
+  width: 0%;
+  height: 2px;
+  background: #157665;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #fdfefe;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* New About Hero Section */
+.about-hero-new {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: url("img/about teras.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 8%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Overlay gradient */
+.about-hero-new::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 89, 64, 0.7),
+    rgba(0, 89, 64, 0.1)
+  );
+  z-index: 2;
+}
+
+/* Content Box */
+.hero-content-box {
+  position: relative;
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 60px 40px;
+  border-radius: 12px;
+  max-width: 550px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.hero-content-box h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #157665;
+  margin-bottom: 15px;
+}
+
+.hero-content-box p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* HERO full screen (INDEX) */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: url("img/terashalal.jpeg") no-repeat center center/cover;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-left: 8%;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.25);
+  z-index: 1;
+}
+
+/* Kotak hijau aksen transparan */
+.green-effect {
+  position: absolute;
+  top: 22%;
+  left: 4%;
+  width: 500px;
+  height: 380px;
+  background: rgba(21, 118, 101, 0.6);
+  border-radius: 12px;
+  z-index: 2;
+  transform: rotate(-3deg);
+
+  opacity: 0;
+  animation: pop-up 0.8s ease forwards;
+  animation-delay: 1.2s;
+}
+
+/* Box putih teks */
+.text-box {
+  position: relative;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 60px 35px 40px 35px;
+  border-radius: 12px;
+  z-index: 3;
+  max-width: 600px;
+  margin-top: 220px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  opacity: 0;
+  animation: slide-in-right 1s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.text-box h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.text-box p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-right: 15px;
+}
+
+.btn-primary {
+  background: #157665;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #005940;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #000;
+  color: #000;
+}
+
+.btn-outline:hover {
+  background: #000;
+  color: #fff;
+}
+
+.text-anim {
+  opacity: 0;
+  transform: translateX(120px);
+  animation: slide-in-right 0.8s ease forwards;
+}
+
+.text-anim.delay1 { animation-delay: 0.9s; }
+.text-anim.delay2 { animation-delay: 1.2s; }
+.text-anim.delay3 { animation-delay: 1.5s; }
+.text-anim.delay4 { animation-delay: 1.8s; }
+
+@keyframes pop-up {
+  from {
+    opacity: 0;
+    transform: scale(0.8) rotate(-3deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(-3deg);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(140px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* About Section */
+.about-section {
+  background: linear-gradient(135deg, #f3fdf8, #e9f7f3);
+}
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #e6f8f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #009e6c;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+.feature-text h5 {
+  margin: 0;
+  font-weight: 600;
+  color: #157665;
+}
+.feature-text p {
+  margin: 0;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.about-section {
+  position: relative;
+  background: #f3fdf8;
+  padding: 140px 0 80px;
+  overflow: hidden;
+}
+
+/* Background hero blur */
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("img/about-teras.jpg") center/cover no-repeat;
+  filter: blur(15px) brightness(0.8);
+  z-index: 1;
+}
+
+/* Konten tetap di atas */
+.about-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Ukuran foto jelas */
+.about-image img {
+  width: 70%;
+  max-width: 380px;
+  margin: 60px auto 0;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+}
+
+/* Hero khusus About */
+.about-hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: url("img/about-teras.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.about-hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url("img/about-teras.jpg") center/cover no-repeat;
+  filter: blur(20px) brightness(0.6);
+  transform: scale(1.1);
+  z-index: -1;
+}
+
+/* Foto jelas */
+.about-image img {
+  width: 100%;
+  max-width: 600px;
+}
+
+/* transparan */
+.feature-box {
+  background: rgba(0, 89, 64, 0.5);
+  padding: 15px;
+  border-radius: 9px;
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #00d28f;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.feature-text h5 {
+  margin: 0;
+  font-weight: 600;
+  color: #fff;
+}
+
+.feature-text p {
+  margin: 0;
+  color: #ddd;
+  font-size: 0.95rem;
+}
+
+/* Team Section */
+.team-section {
+  padding: 100px 8% 120px;
+  background: #ebf5f1;
+  position: relative;
+}
+
+.team-section h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #157665;
+}
+
+/* Animasi pop-up */
+.pop-up {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: popUp 0.6s ease forwards;
+}
+
+@keyframes popUp {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding: 20px 0;
+}
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.team-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  flex: 0 0 280px;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+.team-card:hover {
+  transform: translateY(-8px);
+}
+
+.team-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.team-card h5 {
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #157665;
+}
+
+/* Tombol navigasi */
+.carousel-container button {
+  background: #157665;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s;
+  z-index: 5;
+}
+.carousel-container button:hover {
+  background: #0d4f3d;
+}
+
+.prev {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.next {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Container About */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 140px 8% 60px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Foto */
+.about-image img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+  display: block;
+  margin-top: -10px;
+}
+
+/* Feature box layout */
+.feature-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: rgba(0, 89, 64, 0.5);
+  padding: 15px 20px;
+  border-radius: 9px;
+  margin-bottom: 20px;
+}
+
+.feature-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #00d28f;
+  flex-shrink: 0;
+}
+
+.feature-text h5 {
+  margin: 0;
+  font-weight: 600;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.feature-text p {
+  margin: 3px 0 0;
+  color: #ddd;
+  font-size: 0.95rem;
+}
+
+/* Animasi */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-80px);
+  animation: slideInLeft 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* Animasi dari bawah */
+.slide-up {
+  opacity: 0;
+  transform: translateY(60px);
+  animation: slideUp 0.5s ease forwards;
+}
+
+.slide-up.delay1 { animation-delay: 0.4s; }
+.slide-up.delay2 { animation-delay: 0.7s; }
+.slide-up.delay3 { animation-delay: 1s; }
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.team-card h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #157665;
+  margin-bottom: 6px;
+}
+
+.team-card p {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, #005940, #00a97f);
+  color: #fff;
+  padding: 70px 8%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-logo img {
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.footer-logo p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 350px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 50px;
+}
+
+.footer-links h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #157665;
+  padding-bottom: 5px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 12px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #ddd;
+  transition: color 0.3s;
+  font-size: 1rem;
+}
+
+.footer-links ul li a:hover {
+  color: #fff;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 24px;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #00d28f;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+/* New Left-Aligned Hero Section */
+.hero-left-align {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: url("img/about-teras.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 8%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Visual Effect */
+.hero-left-align::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 89, 64, 0.75) 0%,
+    rgba(0, 89, 64, 0.4) 50%,
+    rgba(0, 89, 64, 0.0) 100%
+  );
+  z-index: 2;
+}
+
+
+/* Content Box aligned to the left */
+.hero-content-box-left {
+  position: relative;
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 60px 40px;
+  border-radius: 12px;
+  max-width: 550px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+
+  /* default sebelum muncul */
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.hero-content-box-left.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.hero-content-box-left h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #157665;
+  margin-bottom: 15px;
+}
+
+.hero-content-box-left p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.hero-text-only {
+  position: relative;
+  z-index: 3;
+  max-width: 650px;
+  color: #fff;
+}
+
+.hero-text-only h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* garis aksen pendek */
+.hero-text-only h1 .line {
+  display: inline-block;
+  width: 6px;
+  height: 32px;
+  background: #00d28f;
+  border-radius: 2px;
+}
+
+.hero-text-only p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #eee;
+  margin-bottom: 18px;
+}
+
+/* Keyframes animasi */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animasi untuk judul hero */
+.hero-text-only h1 {
+  opacity: 0;
+  animation: fadeInLeft 1s ease forwards;
+}
+
+/* Animasi untuk paragraf hero */
+.hero-text-only p {
+  opacity: 0;
+  animation: fadeInRight 1s ease forwards;
+}
+
+/* Biar muncul berurutan */
+.hero-text-only p:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+.hero-text-only p:nth-of-type(2) {
+  animation-delay: 0.9s;
+}
+.hero-text-only p:nth-of-type(3) {
+  animation-delay: 1.3s;
+}
+
+/* Animasi hero kedua muncul pas discroll */
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content-box-left {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUpFade 1s ease forwards;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
+}
+
+/* Container Hero */
+.hero-section-new {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: url("img/terashalal.jpeg") no-repeat center center/cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 0 8% 5%;
+  box-sizing: border-box;
+}
+
+
+/* Overlay gradient transparan hijau */
+.hero-section-new::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 89, 64, 0.7) 0%,
+    rgba(0, 89, 64, 0) 60%
+  );
+  z-index: 2;
+}
+
+/* Konten teks */
+.hero-content-new {
+  position: relative;
+  z-index: 3;
+  max-width: 650px;
+  color: #fff;
+  margin-top: 0;
+}
+
+/* Breadcrumbs */
+.hero-breadcrumbs {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.hero-breadcrumbs span {
+  opacity: 0.8;
+}
+
+/* Judul Utama */
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2.5rem;
+  animation: slide-in-right 1s ease forwards;
+  animation-delay: 0.4s;
+}
+
+/* Tombol */
+.hero-button {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background-color: #157665;
+  color: #fff;
+  animation: slide-in-right 1s ease forwards;
+  animation-delay: 0.8s;
+}
+
+.hero-button:hover {
+  background-color: #0d4f3d;
+}
+
+/* animasi */
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* CSS untuk hero section di halaman program */
+.hero-program {
+  background: url("img/ofor.JPG") no-repeat center center/cover;
+}
+
+/* Hero kedua */
+.hero-second {
+  background: url("img/pelatihan.jpeg") no-repeat center center/cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0 8% 8% 0;
+}
+
+.hero-second .hero-content-new {
+  text-align: right;
+}
+
+.hero-second::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to left,
+    rgba(0, 89, 64, 0.75) 0%,
+    rgba(0, 89, 64, 0.2) 60%,
+    rgba(0, 89, 64, 0) 90%
+  );
+  z-index: 2;
+}
+
+/* Awalnya sembunyi */
+.slide-in-right-on-scroll {
+  opacity: 0;
+  transform: translateX(80px);
+  transition: all 0.9s ease;
+}
+
+/* Aktif saat masuk viewport */
+.slide-in-right-on-scroll.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Back to Top Button */
+#backToTop {
+  display: none; /* default disembunyikan */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #157665;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#backToTop:hover {
+  background-color: #0d4f3d;
+  transform: translateY(-2px);
+}
+
+/* Contact Section */
+.contact-section {
+  background: #f8fdfb;
+  padding: 100px 8%;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-container h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #157665;
+  margin-bottom: 10px;
+}
+
+.contact-container p {
+  font-size: 1rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #157665;
+  outline: none;
+}
+
+.contact-form button {
+  align-self: flex-start;
+  background: #157665;
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #0d4f3d;
+}
+
+/* Contact Info */
+.contact-info {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-info i {
+  color: #157665;
+  font-size: 1.2rem;
+}
+
+/* ---------------------------------------------------------------------------------- */
+/* MEDIA QUERIES (RESPONSIVENESS) */
+/* ---------------------------------------------------------------------------------- */
+
+/* Tablet & Mobile (Max Width 768px) */
+@media (max-width: 768px) {
+    /* General Padding Adjustment */
+    .nav-container,
+    .hero,
+    .about-container,
+    .contact-section,
+    .team-section,
+    footer {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .team-section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Navbar */
+    .logo img {
+        height: 40px; /* smaller logo */
+    }
+    .nav-links {
+        gap: 10px;
+        padding-right: 0;
+    }
+
+    /* HERO INDEX (Halaman Utama) - Mengecilkan ukuran tapi mempertahankan komposisi */
+    .hero {
+        padding-left: 2%; /* Kurangi padding kiri */
+        align-items: center; /* Posisikan vertikal di tengah agar ada ruang */
+    }
+    .green-effect {
+        top: 25%;
+        left: 0%;
+        width: 350px; /* Kecilkan ukuran */
+        height: 280px;
+    }
+    .text-box {
+        margin-top: 0; /* Hapus margin atas yang besar */
+        padding: 30px 20px; /* Kurangi padding */
+        max-width: 90%; /* Ambil lebar layar lebih besar */
+        /* Pindahkan sedikit ke kanan agar komposisi tetap terjaga */
+        transform: translateX(5%);
+        /* Matikan animasi bawaan untuk performa */
+        animation: none;
+        opacity: 1;
+    }
+    .text-box h1 {
+        font-size: 28px; /* Kecilkan font */
+    }
+    .text-box p {
+        font-size: 15px;
+    }
+    .btn {
+        padding: 12px 20px;
+        font-size: 16px;
+        margin-right: 10px;
+    }
+    /* Matikan semua animasi teks untuk performa */
+    .text-anim, .text-anim.delay1, .text-anim.delay2, .text-anim.delay3, .text-anim.delay4 {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    /* About Section */
+    .about-container {
+        flex-direction: column; /* Stack columns: text and image */
+        text-align: center;
+        padding-top: 100px;
+        padding-bottom: 40px;
+    }
+    .about-image {
+        order: 2; /* move image below text */
+    }
+    .about-image img {
+        width: 90%;
+        max-width: 400px;
+        margin-top: 40px;
+    }
+    .about-content {
+        order: 1; /* move text above image */
+        width: 100%;
+    }
+    .feature-box {
+        background: rgba(0, 89, 64, 0.7); /* solid background for readability */
+    }
+    .feature-box {
+        text-align: left; /* Keep text aligned left inside box */
+    }
+
+
+    /* Hero Left Align (About Page Top) */
+    .hero-left-align {
+        padding-left: 5%;
+        align-items: center;
+        text-align: center;
+    }
+    .hero-text-only {
+        max-width: 90%;
+    }
+    .hero-text-only h1 {
+        font-size: 2rem;
+        justify-content: center;
+    }
+    .hero-text-only h1 .line {
+        display: none; /* hide accent line */
+    }
+    .hero-text-only p {
+        font-size: 1rem;
+    }
+    /* Disable hero text animations for better performance */
+    .hero-text-only h1, .hero-text-only p {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    /* Hero New (Program/Kontak) */
+    .hero-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    .hero-section-new {
+      align-items: center; /* center content vertically */
+      padding: 0 5%;
+      height: 70vh; /* Kecilkan tinggi hero section */
+    }
+    .hero-content-new {
+      text-align: center;
+    }
+    .hero-button {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+    /* Hero Second (Program) - Adjust alignment */
+    .hero-second {
+      justify-content: center;
+      padding: 0 5%;
+    }
+    .hero-second .hero-content-new {
+      text-align: center;
+    }
+    .hero-second::before {
+      background: rgba(0, 89, 64, 0.6); /* simplified overlay */
+    }
+    .slide-in-right-on-scroll {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    /* Team Carousel */
+    .carousel-container {
+        padding: 0 20px; /* give some room for swipe/scroll */
+    }
+    .prev, .next {
+        display: none; /* hide arrows, rely on horizontal scrolling/swipe */
+    }
+    .carousel-track {
+        overflow-x: scroll; /* ensure scrolling is enabled */
+    }
+    .team-card {
+        flex: 0 0 240px; /* smaller card size */
+    }
+
+    /* Contact Section */
+    .contact-section {
+      padding: 80px 5%;
+    }
+    .contact-form {
+        padding: 20px;
+    }
+    .contact-form button {
+      align-self: stretch; /* make button full width */
+    }
+    .contact-info {
+      text-align: center;
+    }
+    .contact-info p {
+      justify-content: center;
+    }
+
+
+    /* Footer */
+    footer {
+        padding: 50px 5%;
+    }
+    .footer-container {
+        flex-direction: column; /* stack footer columns */
+        gap: 30px;
+        text-align: center;
+    }
+    .footer-logo p {
+        max-width: none;
+        margin: 0 auto 20px;
+    }
+    .footer-links {
+        justify-content: space-around; /* space out link columns */
+        gap: 30px;
+    }
+    .footer-links h4 {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .footer-links > div {
+        flex: 1; /* evenly distribute link columns */
+    }
+    .footer-links ul {
+        text-align: center;
+    }
+}
+
+/* Smaller Mobile Devices (Max Width 480px) */
+@media (max-width: 480px) {
+    /* Navbar */
+    .nav-links {
+        /* On very small screens, the nav links become full-width and stacked */
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 0;
+    }
+    .nav-links li a {
+        padding: 8px 0;
+    }
+    .nav-links {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    /* HERO INDEX - Lebih kecil lagi */
+    .green-effect {
+        width: 80%; /* Ambil lebar lebih besar */
+        height: 250px;
+        transform: rotate(-3deg);
+    }
+    .text-box {
+        max-width: 95%;
+        padding: 25px 15px;
+        transform: translateX(0); /* Sentralisasi pada layar kecil */
+    }
+    .text-box h1 {
+        font-size: 24px;
+    }
+    .text-box p {
+        font-size: 14px;
+    }
+    .btn {
+        display: block; /* Pastikan tombol tetap menumpuk */
+        margin: 10px 0;
+    }
+
+    /* About Hero New */
+    .hero-text-only h1 {
+        font-size: 1.6rem;
+    }
+
+    /* Program/Kontak Hero */
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    /* Team Carousel */
+    .team-card {
+        flex: 0 0 90%; /* card takes up most of the screen width for easier viewing/scrolling */
+    }
+
+    /* Footer */
+    .footer-links {
+        flex-direction: column; /* stack link columns vertically */
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-links ul {
+      text-align: center;
+    }
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Responsive untuk HP */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgba(0, 89, 64, 0.95);
+    flex-direction: column;
+    width: 200px;
+    text-align: center;
+    padding: 20px 0;
+    gap: 15px;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
